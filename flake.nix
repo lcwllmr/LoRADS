@@ -10,7 +10,7 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" "aarch64-linux" ];
       perSystem = { pkgs, ... }: {
-        packages.lorads = pkgs.stdenv.mkDerivation rec {
+        packages.default = pkgs.stdenv.mkDerivation rec {
           name = "lorads";
           version = "2.0.1-alpha";
           src = ./src;
